@@ -4,11 +4,13 @@
 
 int main() {
     srand(time(0));
-    int n = rand() - RAND_MAX / 2;
+    int n;
+    n = rand() - RAND_MAX / 2;
 
     printf("%d ", n);
-if (n > 0) {
-        printf("is positive\n");
+
+    if (n > 0) {
+	     printf("is positive\n");
     } else if (n == 0) {
         printf("is zero\n");
     } else {
