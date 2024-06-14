@@ -1,8 +1,3 @@
-/**
- * main - This is the main function, where the program starts execution.
- *
- * Return: 0 on success.
- */
 int main(void)
 {
 	int n;
