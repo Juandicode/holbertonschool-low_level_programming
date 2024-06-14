@@ -3,7 +3,7 @@
 #include <time.h>
 /**
  * main - sdfdubefefg
- * return: 0
+ * Return: 0
  */
 int main(void)
 {
