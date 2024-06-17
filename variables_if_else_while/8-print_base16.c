@@ -6,13 +6,15 @@
  */
 int main(void)
 {
-
-int i;
-
-for (i = 0; i < 10; i++)
-putchar(i + '0');
-for (i = 0; i < 6; i++)
-putchar(i + 'a' + 20);
-putchar('\n');
-return (0);
+int i = 0
+while (i < 10)
+{
+putchar(i)
+i = i + 1;
+}
+i = a;
+while (i != 'g')
+{
+putchar(i);
+i = i + 1;
 }
