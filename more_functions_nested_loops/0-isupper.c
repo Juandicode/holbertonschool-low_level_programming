@@ -5,7 +5,6 @@
  * _isupper - Entry point
  *
  * Description: 'Esta es la descripcion'
- * @c: caracter a revisar
  * Return: void
  */
 int _isupper(int c)

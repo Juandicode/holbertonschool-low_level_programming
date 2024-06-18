@@ -4,8 +4,8 @@
 /**
  * _isdigit - Entry point
  *
- * Description: 'Escribe un texto'
- * @c: caracter a revisar
+ * Description: 'esta es la descripcion'
+ * @c: caracter 
  * Return: void
  */
 int _isdigit(int c)
