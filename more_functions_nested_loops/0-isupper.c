@@ -4,7 +4,7 @@
 /**
  * _isupper - Entry point
  *
- * Description: 'Escribe un texto'
+ * Description: 'Esta es la descripcion'
  * @c: caracter a revisar
  * Return: void
  */
