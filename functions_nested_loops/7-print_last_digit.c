@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- *  _islower - Entry Point
+ *  print_last_digit - holberton
  * Return: Always 0
- * Description: this is a description
- * @c: also c
+*Description:print_last_digit
+ *@u: holbi
  */
 int print_last_digit(int u)
 {
@@ -12,8 +12,7 @@ int print_last_digit(int u)
 
 	if (lg < 0)
 		lg = -lg;
-	ff = '0' + lg;
 
-	_putchar(ff);
+	_putchar('0' + lg);
 	return (lg);
 }
