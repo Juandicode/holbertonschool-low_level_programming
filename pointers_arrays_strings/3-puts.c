@@ -1,12 +1,14 @@
 #include "main.h"
-
 /**
-* _puts - prints a strind , followed by a new line
-* @str: pointer
-*/
-
+ * _puts - prints a string
+ * @str: pointer to be printed
+ */
 void _puts(char *str)
-
 {
-	printf("%s\n", str);
+	int nya;
+		for (nya = 0; str[nya] != '\0'; nya++)
+		{
+			_putchar(str[nya]);
+		}
+		_putchar('\n');
 }
