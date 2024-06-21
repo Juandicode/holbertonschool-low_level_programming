@@ -5,10 +5,10 @@
  */
 void _puts(char *str)
 {
-	int nya;
-		for (nya = 0; str[nya] != '\0'; nya++)
+	int jd;
+		for (jd = 0; str[jd] != '\0'; jd++)
 		{
-			_putchar(str[nya]);
+			_putchar(str[jd]);
 		}
 		_putchar('\n');
 }
