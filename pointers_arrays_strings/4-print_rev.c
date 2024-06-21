@@ -11,5 +11,5 @@ if (*s == '\0')
 	return;
 
  print_rev(s + 1);
-    _putchar(*s); // no newline character here!
+    _putchar(*s); 
 }
