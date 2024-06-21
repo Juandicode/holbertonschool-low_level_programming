@@ -1,18 +1,23 @@
 #include "main.h"
+
 /**
- * print_rev - pritns a strings, in reverse
- * return: nad
- * @s:variable
- */
+*print_rev - give us back the script in rev
+*Return: nothing
+*@s: stringgg
+*/
 
 void print_rev(char *s)
-
 {
-	if (*s == '\0')
+	int x = 0;
+	int y;
+
+	while (s[x] != '\0')
+		x++; /* ultima posicion string*/
+
+	for (y = (x - 1); y >= 0; y--)
 	{
-	_putchar('\n');
-	return;
+		_putchar(s[y]);
 	}
-	print_rev(s + 1);
-	_putchar(*s);
+
+	_putchar('\n');
 }
