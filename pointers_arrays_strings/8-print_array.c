@@ -3,10 +3,10 @@
 /**
  * print_array - prints n elements of an array of integers
  * followed by a new line
- * @p: array printed
+ * @a: array printed
  * @n: number of elements to print
  */
-void print_array(int *p, int n)
+void print_array(int *a, int n)
 {
 	int i;
 
