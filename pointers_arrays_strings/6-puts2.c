@@ -1,13 +1,13 @@
 #include "main.h"
 /**
- * puts2 - prints every other character of a string 
+ * puts2 - prints every other character of a string
  * @str: deammn
  */
-void puts2 (char *str)
+void puts2(char *str)
 {
 	int v1, v2;
 
-	v1 =0;
+	v1 = 0;
 
 		while ((str[v1]) != '\0')
 		{
@@ -18,4 +18,4 @@ void puts2 (char *str)
 			_putchar(str[v2]);
 		}
 		_putchar('\n');
-}		
+}
