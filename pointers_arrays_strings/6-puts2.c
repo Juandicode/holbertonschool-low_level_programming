@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * puts2 - bad comment 
+ * puts2 - prints every other character of a string 
  * @str: deammn
  */
 void puts2 (char *str)
