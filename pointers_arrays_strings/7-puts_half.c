@@ -16,7 +16,7 @@ void puts_half(char *str)
 
 	if (v1 % 2 == 0)
 	{
-		for (f = v1 / 2; str[f] '\0'; f++)
+		for (f = v1 / 2; str[f] != '\0'; f++)
 		{
 			_putchar(str[f]);
 		}
@@ -24,7 +24,7 @@ void puts_half(char *str)
 	{
 		for (n = (v1 - 1) / 2; n < v1 - 1; n++)
 		{
-			_putchar(str[n + 1];
+			_putchar(str[n + 1]);
 		}
 	}
 	_putchar('\n');
