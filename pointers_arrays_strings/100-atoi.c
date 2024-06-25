@@ -1,4 +1,4 @@
-#include "main.h"
+#include "main."
 /**
  * _atoi - Convers a string into an int
  * @s: String
