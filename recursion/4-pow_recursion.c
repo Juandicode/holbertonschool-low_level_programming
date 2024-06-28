@@ -1,8 +1,8 @@
 #include "main.h"
 /**
  * _pow_recursion - value of x raised to the power of y.
- * @x: string
- * @y: second string
+ * @x: first int number
+ * @y: second int number
  * Return: retorna el factorial
  */
 int _pow_recursion(int x, int y)
