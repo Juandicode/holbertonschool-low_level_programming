@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * findroot - encuentra la raiz cuadrade de un numero
+ * froot - encuentra la raiz cuadrade de un numero
  * @n: Numero
  * @v1: Number to be powered by itself
  * Return: Number
@@ -15,7 +15,7 @@ int froot(int v1, int n)
 }
 /**
  * _sqrt_recursion - encuentra la raiz cuadrada de un numero
- * @v2: Numero
+ * @n: Numero
  * Return: Numero
  */
 int _sqrt_recursion(int n)
