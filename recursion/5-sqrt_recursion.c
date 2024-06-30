@@ -14,9 +14,8 @@ int froot(int v1, int n)
 	return (-1);
 }
 /**
+* _sqrt_recursion - la raiz cuadrada de un numero
 * @n: Numero
-* _sqrt_recursion - Finds the natural square root of a number
-* @v2: Numero
 * Return: Number
 */
 int _sqrt_recursion(int n)
