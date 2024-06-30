@@ -13,11 +13,7 @@ int froot(int v1, int n)
 		return (froot(v1 + 1, n));
 	return (-1);
 }
-/**
- * _sqrt_recursion - encuentra la raiz cuadrada de un numero
- * @n: Numero
- * Return: Numero
- */
+
 int _sqrt_recursion(int n)
 {
 	int v2 = 0;
