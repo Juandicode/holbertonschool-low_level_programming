@@ -1,58 +1,37 @@
 #include "main.h"
-#include "stdlib.h"
+#include "length.c"
 /**
- * str_concat - concentrate two strings
+ * *str_concat - Concatenates two strings
  *
- * @s1: first string
- * @s2: second string
+ * @s1: String 1
+ * @s2: String 2
  *
- * Return: pointer to the string
- * which memory was allocated for.
+ * Return: String
  */
-char *str_concat(char *s1, char *s2);
+char *str_concat(char *s1, char *s2)
 {
-	size_t i, j, k, limit;
-
-	char *ptr, *tem;
+	char *str;
+	unsigned long int p = 0;
+	unsigned long int l = 0;
 
 	if (s1 == NULL)
-	{
 		s1 = "";
-	}
 	if (s2 == NULL)
-	{
 		s2 = "";
-	}
-
-	len1 = 0;
-
-	while (s1[len1] != '\0')
-	{
-		len1++;
-	}
-
-	len2 = 0;
-
-	while (s2[len2] != '\0')
-	{
-		len2++;
-	}
-
-	ptr = malloc(sizeof(char) * (len1 + len2 + 1));
-
-	if (ptr == NULL)
-	{
-		free(ptr);
+	str = malloc(((length(s1) + length(s2)) + 1) * sizeof(char));
+	if (str == NULL)
 		return (NULL);
-	}
-	for (i = 0; i < len1; i++)
+	while (s1[p] != '\0')
 	{
-		ptr[i] = s[i];
+		str[p] = s1[p];
+		p++;
 	}
-	for (j = 0; j <= len2; j++)
+	while (s2[v] != '\0')
 	{
-		ptr[i] = s2[j];
-		i++;
+		str[p] = s2[l];
+		l++;
+		p++;
 	}
-	return (ptr);
+	str[p] = '\0';
+	return (str);
 }
