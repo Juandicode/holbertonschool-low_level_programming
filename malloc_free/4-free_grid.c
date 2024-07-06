@@ -7,11 +7,12 @@
  */
 void free_grid(int **grid, int height)
 {
-	int i;
+	int a = 0;
 
-	for (i = 0 < height; i++)
+	while (a < height)
 	{
-		free(grid[i]);
+		free(grid[a]);
+		a++;
 	}
 	free(grid);
 }
