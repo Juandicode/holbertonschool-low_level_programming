@@ -3,14 +3,14 @@
 /**
  * *malloc_checked - allocates memory usind malloc
  * @b: Bytes
- * Return: None 
- */ 
+ * Return: None
+ */
 void *malloc_checked(unsigned int b)
 {
 	void *ptr = malloc(b);
-	
+
 	if (ptr == NULL)
-	
+
 	{
 		exit(98);
 	}
