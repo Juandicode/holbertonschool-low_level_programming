@@ -29,12 +29,9 @@ int *array_range(int min, int max)
 		return (NULL);
 	}
 
-	i = 0;
-	while (i < size)
+	for (i = 0; i < size; i++)
 	{
 		array[i] = min + 1;
-		i++;
 	}
-
 	return (array);
 }
