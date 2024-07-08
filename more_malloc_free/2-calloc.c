@@ -2,8 +2,7 @@
 #include "main.h"
 #include "length.c"
 /**
- * *string_nconcat - Concatenates two strings
- * *_calloc - allocates memory for an array
+ * _calloc - allocates memory for an array
  * @nmemb: variable 1
  * @size: size of the array
  * Return: Nothing to return
@@ -27,6 +26,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	*((char *)ptr + i) = 0;
 	i++;
 	}
-
+/* *_calloc - allocates */
 	return (ptr);
 }
