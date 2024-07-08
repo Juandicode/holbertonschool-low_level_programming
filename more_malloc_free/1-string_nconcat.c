@@ -1,37 +1,50 @@
 #include "main.h"
 #include "length.c"
 /**
- * *str_concat - Concatenates 2 strings
+ * *string_nconcat - Concatenates two strings
  * @s1: String 1
  * @s2: String 2
- * n@: unsigned int
- * Return: String
+ * @n: unsigned int 
+ * Return: String concatenated
  */
-char *string_nconcat(char *s1, char *s2, unsigned int n);
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	
+	unsigned int y = 0;
+	unsigned int b = 0;
+	unsigned int lens1;
+	unsigned int lens2;
 	char *str;
-	
-	unsigned int len_s1 = length(s1);
-	unsigned int len_s2 = length(s2);
 
-	str = malloc((len_s1 + n + 1) * sizeof(char));
-	if (str == NULL) 
-	{
+	/* Tratamos strings nulos*/
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+	    /* la longitud d stringss */
+	lens1 = length(s1);
+	lens2 = length(s2);
+	/* Si n es mayor a Len2, agarra su valor */
+	if (n > lens2)
+		n = lens2;
+	/* espacio dinamico de str */
+	newstr = malloc((lens1 + n + 1));
+	/* Malloc  error */
+	if (wstr == NULL)
 		return (NULL);
-	}
-
-	for (unsigned int i = 0; i < len_s1; i++)
+	/* Copiamos String1 */
+	while (y < lens1)
 	{
-		str[i] = s1[i];
+		newstr[y] = s1[y];
+		y++;
 	}
-	
-	for (unsigned int i = 0; i < n && i < len_s2; i++)
+	/* Copiamos String2 */
+	while (b < n)
 	{
-		str[len_s1 + i] = s2[i];
+		newstr[y] = s2[b];
+		y++;
+		b++;
 	}
-
-	str[len_s1 + n] = '\0';
-
-	return str;
+	/* Colocamos Null al final del String */
+	newstr[y] = '\0';
+	return (newstr);
 }
