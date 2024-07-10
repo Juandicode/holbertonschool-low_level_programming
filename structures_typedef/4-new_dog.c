@@ -11,15 +11,16 @@
 int length(char *str)
 {
 	int i = 0;
+
 	if (str == NULL)
-	return 0;
+	return (0);
 
 
 	while (str[i] != '\0')
 	{
 	i++;
 	}
-	return i;
+	return (i);
 }
 
 /**
@@ -31,8 +32,9 @@ int length(char *str)
 char *_strcpy(char *dest, char *src)
 {
 	int v1, v2;
+
 	if (dest == NULL || src == NULL)
-	return NULL;
+	return (NULL);
 
 	v1 = 0;
 
@@ -46,7 +48,7 @@ char *_strcpy(char *dest, char *src)
 	}
 	dest[v2] = '\0';
 
-	return dest;
+	return (dest);
 }
 
 /**
@@ -63,7 +65,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog_t *newdog;
 
 	if (name == NULL || owner == NULL)
-	return NULL;
+	return (NULL);
 
 	len_name = length(name) + 1;
 	len_owner = length(owner) + 1;
@@ -71,13 +73,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	new_name = malloc(sizeof(char) * len_name);
 	if (new_name == NULL)
-	return NULL;
+	return (NULL);
 	_strcpy(new_name, name);
 	new_owner = malloc(sizeof(char) * len_owner);
 	if (new_owner == NULL)
 	{
 	free(new_name);
-	return NULL;
+	return (NULL);
 	}
 	_strcpy(new_owner, owner);
 	/* Malloc de la nueva estructura*/
@@ -86,12 +88,12 @@ dog_t *new_dog(char *name, float age, char *owner)
 	{
 	free(new_name);
 	free(new_owner);
-	return NULL;
+	return (NULL);
 	}
 	/* Le asignamos valor al atributo name, age y owner*/
 	newdog->name = new_name;
 	newdog->age = age;
 	newdog->owner = new_owner;
 	/* Retornamos la nueva estructura formada */
-	return newdog;
+	return (newdog);
 }
