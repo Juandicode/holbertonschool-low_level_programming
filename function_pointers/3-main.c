@@ -1,6 +1,6 @@
 #include "3-calc.h"
 #include <stdlib.h>
-
+#include <unistd.h>
 /**
  * main - performs simple operations
  * @argc: number of arguments
