@@ -1,7 +1,10 @@
 #include "3-calc.h"
 #include <unistd.h>
 #include <stdlib.h>
-
+int _putchar(char c)
+{
+	return write(1, &c, 1);
+}
 /**
  * op_add - returns the sum of a and b
  * @a: number 1
