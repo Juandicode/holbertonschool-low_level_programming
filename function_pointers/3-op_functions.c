@@ -81,3 +81,8 @@ int op_mod(int a, int b)
 }
 	return (a % b);
 }
+
+int _putchar(char c)
+{
+	return(write(1, &c, 1));
+}
