@@ -47,4 +47,6 @@ list_t *add_node_end(list_t **head, const char *str);
  * @h: pointer to the end of the list
  * Return (0)
  */
+
+void free_list(list_t *head);
 #endif /* LISTS_H */
