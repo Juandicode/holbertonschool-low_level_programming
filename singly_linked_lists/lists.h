@@ -39,4 +39,12 @@ list_t *add_node(list_t **head, const char *str);
  * @h: pointer
  * Return (0)
  */
+
+
+list_t *add_node_end(list_t **head, const char *str);
+/**
+ * add_node_end - adds a node at the end of the list
+ * @h: pointer to the end of the list
+ * Return (0)
+ */
 #endif /* LISTS_H */

@@ -20,7 +20,7 @@ list_t *add_node(list_t **head, const char *str)
 	if (str_dup == NULL)
 	return (NULL);
 
-	while (str[len] != '\0')
+	while (str[len] != '\0')  /* calcula la longitud de la cadena */
 	{
 	len++;
 	}
