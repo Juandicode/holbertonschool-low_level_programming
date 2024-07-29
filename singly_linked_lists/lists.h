@@ -1,5 +1,6 @@
 #ifndef LISTS_H
 #define LISTS_H
+
 #include <stddef.h>
 
 /**
@@ -8,6 +9,7 @@
  * @len: length of the string
  * @next: pointer to the next node
  */
+
 typedef struct list_t
 {
 	char *str;
@@ -22,5 +24,13 @@ typedef struct list_t
  * Return: the number of nodes
  */
 size_t print_list(const list_t *h);
+
+/**
+ * list_len - devuelve el número de elementos en una lista enlazada
+ * @h: puntero a la cabeza de la lista
+ *
+ * Return: el número de nodos
+ */
+size_t list_len(const list_t *h);
 
 #endif /* LISTS_H */
