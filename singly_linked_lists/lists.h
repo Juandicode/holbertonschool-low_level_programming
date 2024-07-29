@@ -26,11 +26,17 @@ typedef struct list_t
 size_t print_list(const list_t *h);
 
 /**
- * list_len - devuelve el número de elementos en una lista enlazada
- * @h: puntero a la cabeza de la lista
+ * list_len - give back the number of liked lists
+ * @h: pointer
  *
- * Return: el número de nodos
+ * Return: number of nodes
  */
 size_t list_len(const list_t *h);
 
+list_t *add_node(list_t **head, const char *str);
+/**
+ * *add_node - adds a note
+ * @h: pointer
+ * Return (0)
+ */
 #endif /* LISTS_H */
