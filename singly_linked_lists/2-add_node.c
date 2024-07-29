@@ -19,9 +19,10 @@ list_t *add_node(list_t **head, const char *str)
 	str_dup = strdup(str);
 	if (str_dup == NULL)
 	return (NULL);
+	
 	while (str[len] != '\0')
 	{
-	len++; 
+	len++;
 	}
 
 	/* Crea un nuevo nodo */
