@@ -13,6 +13,7 @@ list_t *add_node(list_t **head, const char *str)
 {
 	list_t *new_node;
 	char *str_dup;
+	int len = 0;
 
 	/* Duplica la cadena */
 	str_dup = strdup(str);
@@ -29,7 +30,7 @@ list_t *add_node(list_t **head, const char *str)
 
 	/* Inicializa el nuevo nodo */
 	new_node->str = str_dup;
-	new_node->len = strlen(str_dup);
+	new_node->len = len;
 	new_node->next = *head;
 
 	/* Actualiza la cabeza de la lista */
