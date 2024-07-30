@@ -45,4 +45,5 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n);
  * Return: the address of the new element, or NULL if it failed
  */
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n);
+void free_dlistint(dlistint_t *head);
 #endif /* LISTS_H */
