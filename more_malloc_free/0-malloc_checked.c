@@ -9,12 +9,12 @@
 void *malloc_checked(unsigned int b)
 {
 
-	void *ptr = malloc(b);  /* Intentar asignar memoria */
+	*p = malloc(b);  /* Intentar asignar memoria */
 	/* Si malloc falla (ptr es NULL), terminamos el programa con exit(98) */
-	if (ptr == NULL)
+	if (p == NULL)
 	{
 		exit(98);
 	}
 
-	return (ptr);  /*Si malloc tiene éxito, retornamos el puntero */
+	return (p);  /*Si malloc tiene éxito, retornamos el puntero */
 }
