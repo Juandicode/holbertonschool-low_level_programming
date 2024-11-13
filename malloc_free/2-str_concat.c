@@ -5,7 +5,7 @@
  * @s1: Primera cadena.
  * @s2: Segunda cadena.
  *
- * Return: Puntero a la nueva cadena concatenada, o NULL si falla la asignación.
+ * Return: Puntero a la nueva cadena.
  */
 char *str_concat(char *s1, char *s2)
 {
