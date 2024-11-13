@@ -5,7 +5,7 @@
  *           una copia de la cadena dada como parámetro.
  * @str: Cadena a duplicar.
  *
- * Return: Puntero a la cadena duplicada o NULL si str es NULL o falla la asignación.
+ * Return: Puntero a la cadena duplicada
  */
 char *_strdup(char *str)
 {
