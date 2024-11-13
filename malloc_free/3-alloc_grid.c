@@ -30,8 +30,8 @@ int **alloc_grid(int width, int height)
 			while (i-- > 0)
 				free(grid[i]);
 			/* liberar el puntero de grid */
-		/*	free(grid);*/
-		/*	return (NULL); */
+			free(grid);
+			return (NULL);
 		}
 		/* inicializo todos los valores de la fila en 0 */
 		j = 0;
