@@ -3,7 +3,7 @@
 /**
  * free_grid - Frees the matrix previously made
  * @grid: Pointer to a pointer
- * @height: Height 
+ * @height: Height
  * Return: None
  */
 void free_grid(int **grid, int height)
