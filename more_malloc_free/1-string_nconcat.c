@@ -48,5 +48,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	/* Añadir el carácter nulo al final de la cadena */
 	result[i + j] = '\0';
+	}
 	return (result);
 }
