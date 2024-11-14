@@ -32,9 +32,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	result = (char *)malloc(total_len * sizeof(char));
 	if (result == NULL)
 	{
-	/* Si no se puede asignar memoria, retornar NULL */
 		return (NULL);
-
+	}
 	 /* Copiar s1 a la nueva cadena */
 	for (i = 0; i < len1; i++)
 	{
@@ -45,7 +44,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (j = 0; j < len2; j++)
 	{
 		result[i + j] = s2[j];
-	}
 	/* Añadir el carácter nulo al final de la cadena */
 	result[i + j] = '\0';
 	}
