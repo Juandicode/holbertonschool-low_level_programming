@@ -1,57 +1,56 @@
 #include "main.h"
-#include <stddef.h>
-#include <stdlib.h>
-#include <sys/stat.h>
-#include <sys/types.h>
-#include <sys/uio.h>
 #include <fcntl.h>
 #include <unistd.h>
-/**
-* read_textfile - reads a text file and prints it to the POSIX standard output.
-*
-* @filename: the name of the file to be read.
-*
-* @letters: the number of letters to be printed from the file.
-*
-* Return: the number of characters read and printed.
-*/
+#include <stdlib.h>
 
+/**
+ * read_textfile - Lee un archivo de texto y lo imprime en la salida estándar
+ * @filename: Nombre del archivo
+ * @letters: Número de letras a leer e imprimir
+ * Return: Número de letras leídas e impresas, o 0 en caso de error
+ */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	char *ol;
-	int openn;
-	ssize_t rd, wr;
+    int fd;
+    ssize_t bytes_read, bytes_written, total_written = 0;
+    char *buffer;
 
-	if (!filename || letters == 0)
-	{
-		return (0);
-	}
-	ol = malloc(sizeof(char) * letters);
-	if (!ol)
-	{
-		return (0);
-	}
-	openn = open(filename, O_RDONLY);
-	if (openn == -1)
-	{
-		free(ol);
-		return (0);
-	}
-	rd = read(openn, ol, letters);
-	if (rd == -1)
-	{
-		free(ol);
-		close(openn);
-		return (0);
-	}
-	wr = write(STDOUT_FILENO, ol, rd);
-	if (wr == -1)
-	{
-		free(ol);
-		close(openn);
-		return (0);
-	}
-	free(ol);
-	close(openn);
-	return (rd);
+    if (!filename)
+        return (0);
+
+    fd = open(filename, O_RDONLY);
+    if (fd == -1)
+        return (0);
+
+    buffer = malloc(sizeof(char) * letters);
+    if (!buffer)
+    {
+        close(fd);
+        return (0);
+    }
+
+    bytes_read = read(fd, buffer, letters);
+    if (bytes_read == -1)
+    {
+        free(buffer);
+        close(fd);
+        return (0);
+    }
+
+    while (total_written < bytes_read)
+    {
+        bytes_written = write(STDOUT_FILENO, buffer + total_written, bytes_read - total_written);
+        if (bytes_written == -1)
+        {
+            free(buffer);
+            close(fd);
+            return (0);
+        }
+        total_written += bytes_written;
+    }
+
+    free(buffer);
+    close(fd);
+    return (total_written);
 }
+
